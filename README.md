@@ -9,45 +9,53 @@ Core Features
 
 The application is structured around three main tasks to manage your finances : 
 
-F1: Log a Transaction
+1. Log a Transaction
 Allows the user to quickly input the details for any new purchase (Date, Amount, Category, and Description).
 Demonstrates: Input/Output and List Appending.
 
-F2: Show a Spending Summary
+2. Show a Spending Summary
 Generates a report that calculates and displays the total amount spent for each category.
 Demonstrates: Dictionary Use for efficient aggregation and Reporting.
 
-F3: Save and Load Data
+3. Save and Load Data
 The system automatically loads old records upon startup and saves all current records safely to a local file before exiting.
 Demonstrates: File Handling (Read/Write) and Data Persistence.
 
 Technologies & Concepts Used
 
 This project was built entirely using core Python features to fulfill the required non-functional requirements:
-Language: Python 3
-Data Structures: Lists for storing all records and Dictionaries for fast summary generation - Performance NF.
-Error Handling: Implemented try - except blocks to manage invalid inputs, like typing letters for the amount Reliability NF.
-Input Validation: Uses basic string checks to ensure the user follows the required format for dates Data Integrity NF.
-Architecture: Simple, menu-driven Control Flow provides an easy-to-use interface Usability NF.
+
+1. Language: Python 3
+2. Data Structures: Lists for storing all records and Dictionaries for fast summary generation - Performance NF.
+3. Error Handling: Implemented try - except blocks to manage invalid inputs, like typing letters for the amount Reliability NF.
+4. Input Validation: Uses basic string checks to ensure the user follows the required format for dates Data Integrity NF.
+5. Architecture: Simple, menu-driven Control Flow provides an easy-to-use interface Usability NF.
 
 
 How to Run the Tracker
 
 Save the file: Save the project code as tracker.py.
-1.Open your terminal or command prompt.
-2.Navigate to the directory where you saved tracker.py.
-3.Run the program using the command: Bash
-4.python tracker.py
-5.The program will give you the main menu
+
+1. Open your terminal or command prompt.
+2. Navigate to the directory where you saved tracker.py.
+3. Run the program using the command: Bash
+4. python tracker.py
+5. The program will give you the main menu
 
 Instructions for Testing
 
 Test the functionality by performing the following steps in order:
+
 Test F3 Load: Run the program for the first time. It should print a message saying, Data file not found. Starting a new ledger.
+
 Test F1 Recording: Select option 1 Record a New Expense three times. Enter different categories e.g. Food, Fun, Food.
+
 Crucial Test: When prompted for the amount, deliberately type hello to ensure the Error Handling NF1 prevents a crash.
+
 Test F2 Summary: Select option 3 Show Category Summary. Verify that the amounts for categories like Food are added up correctly.
+
 Test F3 Save : Select option 4 Save and Exit. A new file named expense_ledger.txt should appear in your directory.
+
 Test F3 Load Persistence: Run python tracker.py again. It should now print a message saying, Records loaded successfully. Found 3 entries, proving the data was saved and loaded correctly.
 
 Screenshots
